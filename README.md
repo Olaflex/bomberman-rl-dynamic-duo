@@ -30,7 +30,8 @@ uv run python main.py play --agents dynamic_duo rule_based_agent rule_based_agen
 uv run python -m agent_code._eval gauntlet --agent dynamic_duo --rounds 200 --out-dir results/gauntlet_dd
 uv run python -m agent_code._eval gauntlet --agent lin_agent   --rounds 200 --out-dir results/gauntlet_lin
 
-# retrain the linear agent (about two minutes per 12 000 episodes on one core)
+# retrain the linear agent (about two minutes per 12 000 episodes on one core);
+# the shipped weights use the 16-feature set `--features graded`
 uv run python -m agent_code.lin_agent.train_lin --rule lstd --features conjesc \
     --crate-reward potential --crate-kappa 0.0 --episodes 12000 --out weights.npy
 
