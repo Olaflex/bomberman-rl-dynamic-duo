@@ -1,0 +1,15 @@
+{
+  "name": "deep_f",
+  "seed": 11,
+  "base": {
+    "rewards": "d1",
+    "reward_anneal_frac": 0.6153846153846154,
+    "inject_dose": 0.25,
+    "inject_anneal_frac": 0.41025641025641024,
+    "opp_frac": 0.0,
+    "bombopp": 0.0,
+    "pot_opp": 0.0,
+    "minibatch": 0,
+    "canonical": true
+  }
+}

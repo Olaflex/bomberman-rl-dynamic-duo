@@ -1,0 +1,9 @@
+{
+  "name": "lin_agent",
+  "features": "graded",
+  "rule": "lstd",
+  "n_step": 1,
+  "r_death": -1.0,
+  "mix": 0.3,
+  "seed": 1
+}

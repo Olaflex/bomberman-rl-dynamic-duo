@@ -1,0 +1,46 @@
+[project]
+name = "bomberman-rl"
+version = "0.1.0"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "matplotlib>=3.11.1",
+    "numba>=0.67.0",
+    "numpy>=2.5.2",
+    "polars>=1.44.1",
+    "pygame>=2.6.1",
+    "pytest>=9.1.1",
+    "scipy>=1.18.1",
+    "torch>=2.13.0",
+    "tqdm>=4.70.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.4",
+    "pdoc>=15.0.0",
+]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+extend-exclude = ["logs", "replays", "results", "screenshots"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "W",    # pycodestyle warnings
+    "I",    # isort
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff-specific
+]
+ignore = [
+    "E501",  # line length: handled by the formatter
+    "E701",  # `if cond: return x` one-liners are pervasive in the given framework
+]
+
+[tool.ruff.format]
+quote-style = "double"
